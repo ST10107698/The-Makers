@@ -1,0 +1,47 @@
+<html>
+<head>
+   <title>login form</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      body{
+         background-image: url('swh.png');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+   </style>
+</head>
+<body>
+   <!--<i>A long lasting service</i>-->
+<div class="form-container">
+
+   <form action="" method="post">
+      <h3>login now</h3>
+      
+      <input type="email" name="email" required placeholder="enter your email">
+      <input type="password" name="password" pattern="^\S{8,}$" 
+      onchange="this.setCustomValidity(this.validity.patternMismatch ? 
+      'Must have at least 8 characters' : ''); if(this.checkValidity()) 
+      form.password_two.pattern = this.value;" required placeholder="enter your password">
+      <input type="button" name="submit" value="login now" onclick="showMessageAndRedirect()" class="form-btn">
+      <p id="message1"></p>
+
+      <script>
+         function showMessageAndRedirect() {
+            document.getElementById("message1").innerText = "You Have Logged In Succefully!";
+            setTimeout(function(){
+               window.location.href="bookingPage.html";
+            },3000); // Redirect after 3 seconds
+            
+         }
+      </script>
+
+      <p>Don't have an account? <a href="register.html">register now</a></p>
+   </form>
+
+</div>
+
+</body>
+</html>
