@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+<div class="form-container">
+   <form id="register-form" action="register.php" method="post">
+      <h3>Register Now</h3>
+      
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+      <input type="password" id="password" name="password" pattern="^\S{8,}$" required placeholder="Enter your password">
+      <input type="password" id="cpassword" name="cpassword" pattern="^\S{8,}$" required placeholder="Confirm your password">
+      
+      <input type="submit" name="submit" value="Register Now" class="form-btn">
+      <p>Already have an account? <a href="login.html">Login now</a></p>
+   </form>
+</div>
+
+</body>
+</html>
